@@ -30,6 +30,7 @@ import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import ManHinhA from './Components/ManHinhA';
 import ManHinhB from './Components/ManHinhB';
+import ListView from './Components/ListView';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -40,22 +41,26 @@ const MyApp: () => React$Node = () => {
     // <View style={styles.container}>
     //   <Person hoten="Tuấn"></Person>
     //   <Person hoten="Mèo"></Person>
+    //   <Person hoten="Chuột"></Person>
     // </View>
 
 /*------------------------Navigator---------------------*/
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="ManHinhA">
-        <Stack.Screen name= "ManHinhA" component={ManHinhA} 
-                      options={{title: "Màn hình A",
-                      headerStyle:{
-                        backgroundColor:"red"
-                      },
-                      headerBackTitleStyle:{
-                        color:"yellow"
-                      }}}></Stack.Screen>
-        <Stack.Screen name= "ManHinhB" component={ManHinhB}></Stack.Screen>
-      </Stack.Navigator>
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <Stack.Navigator initialRouteName="ManHinhA">
+    //     <Stack.Screen name= "ManHinhA" component={ManHinhA} 
+    //                   options={{title: "Màn hình A",
+    //                   headerStyle:{
+    //                     backgroundColor:"red"
+    //                   },
+    //                   headerBackTitleStyle:{
+    //                     color:"yellow"
+    //                   }}}></Stack.Screen>
+    //     <Stack.Screen name= "ManHinhB" component={ManHinhB}></Stack.Screen>
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+
+/*------------------------ListView---------------------*/
+    <ListView />
   );
 };
 
